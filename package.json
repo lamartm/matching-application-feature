@@ -1,0 +1,27 @@
+{
+  "name": "ptech-feature",
+  "version": "1.0.0",
+  "description": "Matching application feature",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamartm/matching-application-feature.git"
+  },
+  "keywords": [
+    "Matching"
+  ],
+  "author": "Mohamed Lamarti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lamartm/matching-application-feature/issues"
+  },
+  "homepage": "https://github.com/lamartm/matching-application-feature#readme",
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "express": "^4.17.2"
+  }
+}
