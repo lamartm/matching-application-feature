@@ -1,0 +1,70 @@
+<%- include ("./partials/head.ejs") %>
+    <section class="signup">
+        <div class="box">
+            <h1>Sign up</h1>
+            <a class="cross" href="/login"></a>
+            <form action="/profile" class="form">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" required>
+
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" required>
+
+                <label for="username">Username</label>
+                <input type="text" name="username" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
+                
+                <p>Genre games you like</p>
+
+                <div class="genre-games">
+                    <label for="shooter"> Shooter <input type="checkbox" id="shooter" name="shooter" value="Shooter"> </label>
+
+                    <label for="fighting"> Fighting <input type="checkbox" id="fighting" name="fighting" value="Fighting"></label>
+                    
+                    <label for="platformer"> Platformer <input type="checkbox" id="platformer" name="platformer" value="Platformer"></label>
+                    
+                    <label for="RPG"> RPG <input type="checkbox" id="RPG" name="RPG" value="RPG"></label>
+                    
+                    <label for="sport"> Sport <input type="checkbox" id="sport" name="sport" value="Sport"></label>
+
+                    <label for="adventure"> Adventure <input type="checkbox" id="adventure" name="adventure" value="Adventure"></label>
+
+                    <label for="sim"> Sim <input type="checkbox" id="sim" name="sim" value="Sim"></label>
+
+                    <label for="horror"> Horror <input type="checkbox" id="horror" name="horror" value="Horror"></label>
+
+                    <label for="strategy"> Strategy <input type="checkbox" id="strategy" name="strategy" value="Strategy"></label>
+
+                    <label for="RTS"> RTS <input type="checkbox" id="RTS" name="RTS" value="RTS"></label>
+
+                    <label for="MOBA"> MOBA <input type="checkbox" id="MOBA" name="MOBA" value="MOBA"></label>
+
+                    <label for="puzzle"> Puzzle <input type="checkbox" id="puzzle" name="puzzle" value="Puzzle"></label>
+                </div>
+
+                <p>Are you a single or multiplayer gamer?</p>
+
+                <div class="type-gamer">
+                    <label for="singleplayer"><input type="radio" id="singleplayer" name="type-gamer" value="Singleplayer"> Singleplayer</label>
+                    
+                    <label for="multiplayer"><input type="radio" id="multiplayer" name="type-gamer" value="Multiplayer">Multiplayer</label>
+                    
+                    <label for="both"><input type="radio" id="both" name="type-gamer" value="Both">Both</label>
+                </div>
+
+                <label for="game">Favourite game</label>
+                <input type="text" name="game" required>
+
+                <button class="button" type="submit">Sign up</button>
+            </form>
+        </div>
+    </section>
+<%- include ("./partials/footer.ejs") %>

@@ -1,0 +1,19 @@
+<%- include ("./partials/head.ejs") %>
+    <section class="profile">
+        <h1><%- data.name %></h1>
+        <img class="person-pic" src="images/person.png">
+        <article class="person-info">
+            <p><%- data.age %> years old</p>
+            <p>Likes</p>
+            <ul>
+                <% data.likes.forEach(genre => { %>
+                <li><%- genre %></li>
+                <% }) %>
+            </ul>
+            <p>Favourite game</p>
+            <p class="purple-text"><%- data.favourite %></p>
+            <p>Is a</p>
+            <p class="purple-text"><%- data.is %></p>
+        </article>
+    </section>
+<%- include ("./partials/footer.ejs") %>
