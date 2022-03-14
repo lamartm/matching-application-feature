@@ -52,6 +52,18 @@ app.get("/profile/:id", (req, res) => {
     );
 });
 
+app.get("/error/:id", (req, res) => {
+  req.params.id === "email"
+    ? res.render("error", {
+        data: "De gekozen e-mail adres is al in gebruik",
+        pageTitle: `error`,
+      })
+    : res.render("error", {
+        data: "Gebruiker niet gevonden",
+        pageTitle: `error`,
+      });
+});
+
 app.post("/login", checkForUser);
 app.post("/signup", createUser);
 
@@ -73,9 +85,16 @@ function createUser(req, res) {
     is: req.body.type,
   };
 
-  getUserData(dbName)
-    .then((data) => data.insertOne(newUserData))
-    .then(res.redirect("/profile/" + username));
+  getUserData(dbName).then(async (data) => {
+    const emailCheck = await data.findOne({ email: req.body.email });
+
+    if (emailCheck === null) {
+      data.insertOne(newUserData);
+      res.redirect("/profile/" + username);
+    } else {
+      res.redirect("/error/" + "email");
+    }
+  });
 }
 
 function checkForUser(req, res) {
@@ -91,6 +110,6 @@ function checkForUser(req, res) {
     .then((user) =>
       user
         ? res.redirect("/profile/" + username)
-        : res.status(200).send("User not found")
+        : res.redirect("/error/" + "user")
     );
 }
