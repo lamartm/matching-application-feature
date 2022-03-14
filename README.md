@@ -20,7 +20,13 @@ Om de project te gebruiken:
 ``` npm start ```
 
 ## Sources ℹ️
-Al mijn bronnen tot nu toe komen van de gegeven les stof die we krijgen.
+Al mijn bronnen komen van de gegeven les stof die we krijgen.
+
+Verder heb ik de volgende bronnen gebruikt buiten de gegeven les stof:
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#getting_information_out_of_animations
+https://www.youtube.com/watch?v=wM7NJtQ0F6U&ab_channel=DeveloperSoapbox
+https://docs.atlas.mongodb.com/getting-started/
 
 ## Database Structure
 
