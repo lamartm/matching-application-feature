@@ -21,3 +21,10 @@ Om de project te gebruiken:
 
 ## Sources ℹ️
 Al mijn bronnen tot nu toe komen van de gegeven les stof die we krijgen.
+
+## Database Structure
+
+![Database structure drawn](https://i.ibb.co/vL8SzrL/Database-structure.png)
+
+De userdata wordt in de database opgeslagen hier. Ik voeg dan in deze collectie nieuwe gebruikers toe en zoek voor bestaande.
+![Database structure drawn](https://i.ibb.co/rFFQK28/database-atlas.png)
