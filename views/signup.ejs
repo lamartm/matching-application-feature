@@ -1,121 +1,121 @@
 <%- include ("./partials/head.ejs") %>
-<section class="signup">
-  <div class="box">
-    <h1>Sign up</h1>
-    <a class="cross" href="/login"></a>
-    <form class="form" method="post">
-      <label for="name">Name</label>
-      <input type="text" name="name" required />
+  <section class="signup">
+    <div class="box">
+      <h1>Sign up</h1>
+      <a class="cross" href="/login"></a>
+      <form class="form" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" required />
 
-      <label for="surname">Surname</label>
-      <input type="text" name="surname" required />
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" required />
 
-      <label for="birthday">Birthday</label>
-      <input type="date" name="birthday" required />
+        <label for="birthday">Birthday</label>
+        <input type="date" name="birthday" required />
 
-      <label for="username">Username</label>
-      <input type="text" name="username" required />
+        <label for="username">Username</label>
+        <input type="text" name="username" required />
 
-      <label for="email">E-mail</label>
-      <input type="email" name="email" required />
+        <label for="email">E-mail</label>
+        <input type="email" name="email" required />
 
-      <label for="password">Password</label>
-      <input type="password" name="password" required />
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
 
-      <p>Genre games you like</p>
+        <p>Genre games you like</p>
 
-      <div class="genre-games">
-        <label for="shooter">
-          Shooter
-          <input type="checkbox" id="shooter" name="genre" value="Shooter" />
-        </label>
+        <div class="genre-games">
+          <label for="shooter">
+            Shooter
+            <input type="checkbox" id="shooter" name="genre" value="Shooter" />
+          </label>
 
-        <label for="fighting">
-          Fighting
-          <input type="checkbox" id="fighting" name="genre" value="Fighting"
-        /></label>
+          <label for="fighting">
+            Fighting
+            <input type="checkbox" id="fighting" name="genre" value="Fighting"
+          /></label>
 
-        <label for="platformer">
-          Platformer
-          <input
-            type="checkbox"
-            id="platformer"
-            name="genre"
-            value="Platformer"
-        /></label>
+          <label for="platformer">
+            Platformer
+            <input
+              type="checkbox"
+              id="platformer"
+              name="genre"
+              value="Platformer"
+          /></label>
 
-        <label for="RPG">
-          RPG <input type="checkbox" id="RPG" name="genre" value="RPG"
-        /></label>
+          <label for="RPG">
+            RPG <input type="checkbox" id="RPG" name="genre" value="RPG"
+          /></label>
 
-        <label for="sport">
-          Sport <input type="checkbox" id="sport" name="genre" value="Sport"
-        /></label>
+          <label for="sport">
+            Sport <input type="checkbox" id="sport" name="genre" value="Sport"
+          /></label>
 
-        <label for="adventure">
-          Adventure
-          <input type="checkbox" id="adventure" name="genre" value="Adventure"
-        /></label>
+          <label for="adventure">
+            Adventure
+            <input type="checkbox" id="adventure" name="genre" value="Adventure"
+          /></label>
 
-        <label for="sim">
-          Sim <input type="checkbox" id="sim" name="genre" value="Sim"
-        /></label>
+          <label for="sim">
+            Sim <input type="checkbox" id="sim" name="genre" value="Sim"
+          /></label>
 
-        <label for="horror">
-          Horror <input type="checkbox" id="horror" name="genre" value="Horror"
-        /></label>
+          <label for="horror">
+            Horror <input type="checkbox" id="horror" name="genre" value="Horror"
+          /></label>
 
-        <label for="strategy">
-          Strategy
-          <input type="checkbox" id="strategy" name="genre" value="Strategy"
-        /></label>
+          <label for="strategy">
+            Strategy
+            <input type="checkbox" id="strategy" name="genre" value="Strategy"
+          /></label>
 
-        <label for="RTS">
-          RTS <input type="checkbox" id="RTS" name="genre" value="RTS"
-        /></label>
+          <label for="RTS">
+            RTS <input type="checkbox" id="RTS" name="genre" value="RTS"
+          /></label>
 
-        <label for="MOBA">
-          MOBA <input type="checkbox" id="MOBA" name="genre" value="MOBA"
-        /></label>
+          <label for="MOBA">
+            MOBA <input type="checkbox" id="MOBA" name="genre" value="MOBA"
+          /></label>
 
-        <label for="puzzle">
-          Puzzle <input type="checkbox" id="puzzle" name="genre" value="Puzzle"
-        /></label>
-      </div>
+          <label for="puzzle">
+            Puzzle <input type="checkbox" id="puzzle" name="genre" value="Puzzle"
+          /></label>
+        </div>
 
-      <p>Are you a single or multiplayer gamer?</p>
+        <p>Are you a single or multiplayer gamer?</p>
 
-      <div class="type">
-        <label for="singleplayer">
-          <input
-            type="radio"
-            id="singleplayer"
-            name="type"
-            value="Singleplayer"
-          />
-          Singleplayer
-        </label>
-        <label for="multiplayer">
-          <input
-            type="radio"
-            id="multiplayer"
-            name="type"
-            value="Multiplayer"
-          />
-          Multiplayer
-        </label>
+        <div class="type">
+          <label for="singleplayer">
+            <input
+              type="radio"
+              id="singleplayer"
+              name="type"
+              value="Singleplayer"
+            />
+            Singleplayer
+          </label>
+          <label for="multiplayer">
+            <input
+              type="radio"
+              id="multiplayer"
+              name="type"
+              value="Multiplayer"
+            />
+            Multiplayer
+          </label>
 
-        <label for="both">
-          <input type="radio" id="both" name="type" value="Both" />
-          Both
-        </label>
-      </div>
+          <label for="both">
+            <input type="radio" id="both" name="type" value="Both" />
+            Both
+          </label>
+        </div>
 
-      <label for="game">Favourite game</label>
-      <input type="text" name="game" required />
+        <label for="game">Favourite game</label>
+        <input type="text" name="game" required />
 
-      <button class="button" type="submit">Sign up</button>
-    </form>
-  </div>
-</section>
+        <button class="button" type="submit">Sign up</button>
+      </form>
+    </div>
+  </section>
 <%- include ("./partials/footer.ejs") %>

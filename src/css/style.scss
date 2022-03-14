@@ -3,140 +3,168 @@
 @import "variables/fontsize.scss";
 
 body {
-    background-color: $background-color;
-    font-family: 'Roboto', sans-serif;
+  background-color: $background-color;
+  font-family: "Roboto", sans-serif;
 }
 
 .about {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-info {
-    color: $white;
-    text-align: center;
-    padding: 0 $space-small $space-medium $space-small;
+  color: $white;
+  text-align: center;
+  padding: 0 $space-small $space-medium $space-small;
 }
 
 .app-title {
-    color: $secondary-color;
-    font-size: $font-medium;
+  color: $secondary-color;
+  font-size: $font-medium;
 }
 
 .app-title span {
-    color: $main-color;
+  color: $main-color;
 }
 
 .button {
-    padding: $space-smaller $space-medium $space-smaller $space-medium;
-    background-color: $main-color;
-    border: none;
-    width: 100%;
-    margin-bottom: $space-smaller;
-    color: $white;
-    text-decoration: none;
+  padding: $space-smaller $space-medium $space-smaller $space-medium;
+  background-color: $main-color;
+  border: none;
+  width: 100%;
+  margin-bottom: $space-smaller;
+  color: $white;
+  text-decoration: none;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .box {
-    position: relative;
-    margin: 0 auto;
-    background-color: $white;
-    width: 100%;
-    max-width: 300px;
-    padding: $space-smaller $space-medium $space-medium $space-medium;
-    color: $main-color;
+  position: relative;
+  margin: 0 auto;
+  background-color: $white;
+  width: 100%;
+  max-width: 300px;
+  padding: $space-smaller $space-medium $space-medium $space-medium;
+  color: $main-color;
 }
 
 .box h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .cross {
-    text-decoration: none;
-    position: absolute;
-    right: 36px;
-    top: 19px;
+  text-decoration: none;
+  position: absolute;
+  right: 36px;
+  top: 19px;
 }
 
 .cross::before {
-    content: '\00d7';
-    color: $main-color;
-    font-size: 40px;
+  content: "\00d7";
+  color: $main-color;
+  font-size: 40px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form input {
-    margin-bottom: $space-medium;
-    border: none;
-    border-bottom: 2px rgb(218, 218, 218) solid;
+  margin-bottom: $space-medium;
+  border: none;
+  border-bottom: 2px rgb(218, 218, 218) solid;
 }
 
 .form label {
-    margin-bottom: $space-smaller;
+  margin-bottom: $space-smaller;
 }
 
 .genre-games {
+  padding-top: $space-small;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.genre-games label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 26%;
+}
+
+@supports (display: grid) {
+  .genre-games {
     padding-top: $space-small;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-between;
-}
-
-.genre-games label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
 }
 
 .type-gamer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
+
 .profile {
-    padding: 0 $space-medium;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 0 $space-medium;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile h1 {
-    color: $white;
-    text-align: center;
+  color: $white;
+  text-align: center;
 }
 
-.person-info {
-    color: $white;
+#person-info {
+  color: $white;
 }
 
-.person-info ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-    color: $main-color;
+#person-info ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  color: $main-color;
 }
 
-.person-info ul li {
-    display: inline-block;
+#person-info ul li {
+  display: inline-block;
 }
 
 .purple-text {
-    color: $main-color;
+  color: $main-color;
 }
 
-.person-pic {
-    width: 30%;
-    margin: 0 auto;
+#person-pic {
+  width: 30%;
+  margin: 0 auto;
+}
+
+#rotation-label {
+  display: flex;
+}
+
+input[type="checkbox"]:checked + label {
+  animation: rotate 1000ms;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

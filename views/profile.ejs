@@ -1,19 +1,27 @@
 <%- include ("./partials/head.ejs") %>
-<section class="profile">
-  <h1><%- data.name %></h1>
-  <img class="person-pic" src="/images/person.png" />
-  <article class="person-info">
-    <p>Birthday: <%- data.birthday %></p>
-    <p>Likes</p>
-    <ul>
-      <% data.likes.forEach(genre => { %>
-      <li><%- genre %></li>
-      <% }) %>
-    </ul>
-    <p>Favourite game</p>
-    <p class="purple-text"><%- data.favourite %></p>
-    <p>Is a</p>
-    <p class="purple-text"><%- data.is %></p>
-  </article>
-</section>
+  <section class="profile">
+    <h1><%- data.name %></h1>
+    <input type="checkbox" name="rotation" id="rotation-id">
+    <label for="rotation" id="rotation-label">
+      <img id="person-pic" src="/images/person.png" />
+    </label>
+    <article id="person-info">
+      <p>Birthday: <%- data.birthday %></p>
+      <p>Likes</p>
+      <ul>
+        <% if(Array.isArray(data.likes)) { %>
+          <% data.likes.forEach(genre => { %>
+          <li><%- genre %></li>
+          <% }) %>
+        <% } else{ %>
+          <li><%- data.likes %></li>
+        <% } %> 
+      </ul>
+      <p>Favourite game</p>
+      <p class="purple-text"><%- data.favourite %></p>
+      <p>Is a</p>
+      <p class="purple-text"><%- data.is %></p>
+    </article>
+  </section>
+  <script src="/js/interaction.js"></script>
 <%- include ("./partials/footer.ejs") %>

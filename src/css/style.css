@@ -1,6 +1,6 @@
 body {
   background-color: #2d3552;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .about {
@@ -71,7 +71,7 @@ body {
 }
 
 .cross::before {
-  content: '\00d7';
+  content: "\00d7";
   color: #bd55ff;
   font-size: 40px;
 }
@@ -98,13 +98,15 @@ body {
 
 .genre-games {
   padding-top: 1em;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .genre-games label {
@@ -118,6 +120,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 26%;
+      -ms-flex: 26%;
+          flex: 26%;
+}
+
+@supports (display: grid) {
+  .genre-games {
+    padding-top: 1em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .type-gamer {
@@ -150,11 +168,11 @@ body {
   text-align: center;
 }
 
-.person-info {
+#person-info {
   color: white;
 }
 
-.person-info ul {
+#person-info ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,7 +184,7 @@ body {
   color: #bd55ff;
 }
 
-.person-info ul li {
+#person-info ul li {
   display: inline-block;
 }
 
@@ -174,8 +192,41 @@ body {
   color: #bd55ff;
 }
 
-.person-pic {
+#person-pic {
   width: 30%;
   margin: 0 auto;
+}
+
+#rotation-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="checkbox"]:checked + label {
+  -webkit-animation: rotate 1000ms;
+          animation: rotate 1000ms;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
