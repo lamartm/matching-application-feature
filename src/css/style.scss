@@ -65,6 +65,10 @@ body {
   top: 19px;
 }
 
+.cross span {
+  display: none;
+}
+
 .cross::before {
   content: "\00d7";
   color: $main-color;
