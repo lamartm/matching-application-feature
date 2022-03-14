@@ -1,17 +1,17 @@
 document.getElementById("rotation-id").style.display = "none";
 
-const rotation = [
+const rotationAnimation = [
   { transform: "rotate(0deg)" },
   { transform: "rotate(360deg)" },
 ];
 
-const rotationTiming = {
+const rotationAnimationTiming = {
   duration: 1000,
 };
 
 const rotatingPicture = document
   .getElementById("rotation-label")
-  .animate(rotation, rotationTiming);
+  .animate(rotationAnimation, rotationAnimationTiming);
 
 rotatingPicture.pause();
 

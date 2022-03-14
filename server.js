@@ -50,14 +50,14 @@ app.get("/profile/:id", (req, res) => {
     );
 });
 
-app.post("/login", check);
-app.post("/signup", create);
+app.post("/login", checkForUser);
+app.post("/signup", createUser);
 
 app.listen(port, function () {
   console.log(`Application started on port: ${port}`);
 });
 
-function create(req, res) {
+function createUser(req, res) {
   const username = slug(req.body.username).toLowerCase();
 
   let newUserData = {
@@ -76,7 +76,7 @@ function create(req, res) {
     .then(res.redirect("/profile/" + username));
 }
 
-function check(req, res) {
+function checkForUser(req, res) {
   const username = slug(req.body.username).toLowerCase();
 
   getUserData(dbName)
