@@ -160,6 +160,14 @@ body {
   display: flex;
 }
 
+.error-message {
+  display: flex;
+  color: white;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 input[type="checkbox"]:checked + label {
   animation: rotate 1000ms;
 }
