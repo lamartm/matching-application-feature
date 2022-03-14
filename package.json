@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "eslint": "^8.10.0",
+    "nodemon": "^2.0.15",
     "rollup": "^2.70.1"
   }
 }
