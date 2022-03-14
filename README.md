@@ -20,7 +20,7 @@ Om de project te gebruiken:
 ``` npm start ```
 
 ## Sources ℹ️
-Al mijn bronnen komen van de gegeven les stof die we krijgen.
+Al mijn bronnen komen van de gegeven les stof die we hadden gekregen.
 
 Verder heb ik de volgende bronnen gebruikt buiten de gegeven les stof:
 
